@@ -5,8 +5,8 @@ Dacon StarCraft Action Analysis Submission Info
 
 https://docs.google.com/spreadsheets/d/1BvNHe--RWGPxjPGwlAWltzUm1fxYmMcqDHsZCYKIIQA/edit?usp=drive_web&ouid=109134545473965755837
 
-추가한 컬럼
- p0,p1_wm : p0,p1 일꾼 개수 
- P0,P1_enemy_rc : p0,p1 적군기지 인근 right_click 개수
- p0,p1_p_selection : p0,p1 selection 컬럼의 의미없는 빈 리스트 제거
- p0,p1_early_find : p0,p1 적군 시야를 먼저 확인한 플레이어
+추가한 컬럼  
+ p0,p1_wm : p0,p1 일꾼 개수  
+ P0,P1_enemy_rc : p0,p1 적군기지 인근 right_click 개수  
+ p0,p1_p_selection : p0,p1 selection 컬럼의 의미없는 빈 리스트 제거  
+ p0,p1_early_find : p0,p1 적군 시야를 먼저 확인한 플레이어  
