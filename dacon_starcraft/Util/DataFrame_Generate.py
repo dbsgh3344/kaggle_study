@@ -1,3 +1,5 @@
+import pandas as pd
+
 def df_counting(p0_data,p1_data,x_data,variable_name):
 
     p0_df = pd.DataFrame(p0_data.game_id.value_counts().keys(),columns=['game_id'])
