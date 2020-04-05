@@ -10,3 +10,7 @@ https://docs.google.com/spreadsheets/d/1BvNHe--RWGPxjPGwlAWltzUm1fxYmMcqDHsZCYKI
  P0,P1_enemy_rc : p0,p1 적군기지 인근 right_click 개수  
  p0,p1_p_selection : p0,p1 selection 컬럼의 의미없는 빈 리스트 제거  
  p0,p1_early_find : p0,p1 적군 시야를 먼저 확인한 플레이어  
+ p0,p1_multi : 멀티 갯수
+ p0,p1_sup : 보급건물 갯수
+ p0,p1_baseunit : 기본유닛 개수 (마린,추적자,저글링)
+ 
