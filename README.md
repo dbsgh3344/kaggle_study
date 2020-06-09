@@ -16,7 +16,7 @@ https://docs.google.com/spreadsheets/d/1BvNHe--RWGPxjPGwlAWltzUm1fxYmMcqDHsZCYKI
  
 Dacon StarCraft 종료 score : 0.698
 
-
+&nasp;&nasp;&nasp;
 
 Dacon Corona Visualization Info
 
@@ -26,7 +26,7 @@ https://docs.google.com/spreadsheets/d/1hdfjf67PCaW4CASxjAsfU3pnVbfOHhOkonQdSDjY
 
 Dacon Corona Visualization 종료
 
-
+&nasp;&nasp;&nasp;
 
 KMA Weather Contest Info
 
