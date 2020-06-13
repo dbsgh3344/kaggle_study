@@ -14,11 +14,28 @@ https://docs.google.com/spreadsheets/d/1BvNHe--RWGPxjPGwlAWltzUm1fxYmMcqDHsZCYKI
  p0,p1_sup : 보급건물 갯수
  p0,p1_baseunit : 기본유닛 개수 (마린,추적자,저글링)
  
-Dacon StarCraft 종료 score : 0.698
+Dacon StarCraft 종료 score : 0.698  
+
+----------------------------------------------------------------------------------------------------------------------  
+
 
 Dacon Corona Visualization Info
 
 https://docs.google.com/spreadsheets/d/1hdfjf67PCaW4CASxjAsfU3pnVbfOHhOkonQdSDjYClI/edit?usp=drive_web&ouid=109134545473965755837
 
 입국 관련 정책만 분석
+
+Dacon Corona Visualization 종료  
+
+----------------------------------------------------------------------------------------------------------------------  
+    
+KMA Weather Contest Info
+
+date 
+2020/06/01 ~
+
+https://docs.google.com/spreadsheets/d/1wHuss0qazdAo7fRSaW2sBs2DTh5jjVTkeoPRGqYcQnU/edit#gid=0   
+
+  
+
 
