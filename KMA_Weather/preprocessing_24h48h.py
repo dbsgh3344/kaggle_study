@@ -13,10 +13,10 @@ def loc_func(location,plant_num,loc_num):
 
 
 
-    # 24h ÈÄ date column »ý¼º
+    # 24h ï¿½ï¿½ date column ï¿½ï¿½ï¿½ï¿½
     location['24h_datetime']  =location['datetime'] + datetime.timedelta(hours=24)
     
-    # 48h ÈÄ date column »ý¼º
+    # 48h ï¿½ï¿½ date column ï¿½ï¿½ï¿½ï¿½
     location['48h_datetime']  =location['datetime'] + datetime.timedelta(hours=48)
 
     cond_lists24 = []
@@ -39,6 +39,24 @@ def loc_func(location,plant_num,loc_num):
             # print(loc1.loc[loc1['datetime']==i,'plant1_train.cond_loc1'].item())    
     location['24h_cond'] = cond_lists24
     location['48h_cond'] = cond_lists48
+
+
+
+def swv(t1_df,t2_df,hum_df) :
+    
+    """ input temperature data in factory , temperature data in coil , humidity data in factory 
+        return saturated water vapor in coil temperature - water vapor in factory
+    """
+
+    loc_swv = t1_df.apply(lambda t1 : (6.11 * (10)**((7.5*t1)/(t1+237.3))) /10)
+    coil_swv = t2_df.apply(lambda t2 :(6.11 * (10)**((7.5*t2)/(t2+237.3))) /10 )
+    now_vr = (loc_swv*hum_df) / 100
+    
+    
+    return coil_swv- now_vr
+
+
+
     return location
     
 
