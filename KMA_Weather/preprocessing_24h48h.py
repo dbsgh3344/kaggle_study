@@ -72,13 +72,13 @@ def resampling_scaling(df, resm_period,sc_col_st,sc_col_end, ):
         scaling column end number (int): will use sliding  
         """
     
-    df_3h= df.resample(resm_period).mean()
-    df_3h = df_3h.interpolate()
+    df_h= df.resample(resm_period).mean()
+    df_h = df_h.interpolate()
     
     mms = MinMaxScaler()
 
-    mms.fit(df_3h.iloc[:,sc_col_st:sc_col_end])
-    scaled_x = mms.transform(df_3h.iloc[:,sc_col_st:sc_col_end])
+    mms.fit(df_h.iloc[:,sc_col_st:sc_col_end])
+    scaled_x = mms.transform(df_h.iloc[:,sc_col_st:sc_col_end])
     
     df= pd.DataFrame(scaled_x)
 
@@ -107,4 +107,29 @@ def create_squence(x,time_steps,col_st,col_end):
     
     return np.array(x_list),np.array(y_list)  
 
+
+
+def create_test_sequence(x,dates):
+    """ input dataframe  
+        dates (str) : ex) 1 days , 2 days     
+        will use all column   
+        not available time step so, will use datetime index to make 24h, 48h time series data  
+	  
+	output 3d array x_test  
+
+    """
+
+
+    test_x = []
+    for i in range(len(x)):
+        day= x.index[i] +pd.Timedelta(dates)
+        # twoday= x.index[i] +pd.Timedelta('2 days')
+        
+        val = x.loc[x.index[i]:day].values
+
+        
+# [[ 'plant_test.hum_in','plant_test.tem_in','plant_test.tem_coil','plant_test.tem_out_loc1','plant_test.hum_out_loc1']]
+        test_x.append(val)
+
+    return np.array(test_x)
 
