@@ -1,7 +1,7 @@
-import numpy as np
+﻿import numpy as np
 import pandas as pd
 import datetime
-
+from sklearn.preprocessing import StandardScaler,MinMaxScaler
 
 def loc_func(location,plant_num,loc_num):
     """ input location data, plant number, location number 
@@ -40,6 +40,7 @@ def loc_func(location,plant_num,loc_num):
     location['24h_cond'] = cond_lists24
     location['48h_cond'] = cond_lists48
 
+    return location
 
 
 def swv(t1_df,t2_df,hum_df) :
@@ -57,6 +58,53 @@ def swv(t1_df,t2_df,hum_df) :
 
 
 
-    return location
     
+    
+
+
+
+
+def resampling_scaling(df, resm_period,sc_col_st,sc_col_end, ):
+    """ input 
+        dataframe,  
+        resampling perioid (str) : pandas resampling method,  
+        scaling column start number (int): will use sliding   
+        scaling column end number (int): will use sliding  
+        """
+    
+    df_3h= df.resample(resm_period).mean()
+    df_3h = df_3h.interpolate()
+    
+    mms = MinMaxScaler()
+
+    mms.fit(df_3h.iloc[:,sc_col_st:sc_col_end])
+    scaled_x = mms.transform(df_3h.iloc[:,sc_col_st:sc_col_end])
+    
+    df= pd.DataFrame(scaled_x)
+
+    return df
+
+
+def create_squence(x,time_steps,col_st,col_end):
+    """input dataframe, time step (int),  
+    col_st : to sequence col start number    
+     col_end : to sequence col end number  
+      
+    output 3d array x_train, 2d array y_train  
+    """
+
+
+
+    
+    x_list =[]
+    y_list =[]
+    for i in range(len(x)-time_steps):
+        sequence = x.iloc[i:i+time_steps,col_st:col_end].values
+        label =x.iloc[i+time_steps,col_st:col_end].values
+        
+        x_list.append(sequence)
+        y_list.append(label)
+    
+    return np.array(x_list),np.array(y_list)  
+
 
