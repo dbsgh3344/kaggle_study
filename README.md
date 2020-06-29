@@ -32,10 +32,11 @@ Dacon Corona Visualization 종료
 KMA Weather Contest Info
 
 date 
-2020/06/01 ~
+2020/06/01 ~ 2020/06/29 
 
 https://docs.google.com/spreadsheets/d/1wHuss0qazdAo7fRSaW2sBs2DTh5jjVTkeoPRGqYcQnU/edit#gid=0   
 
-  
+AUC Score 0.5959
+KMA Weather Contest 종료
 
 
