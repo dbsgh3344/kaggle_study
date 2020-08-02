@@ -1,6 +1,6 @@
 # kaggle_study
 kaggle & dacon repo
-
+---------------------------------------------------------------------------------------------------------------------- 
 Dacon StarCraft Action Analysis Submission Info
 
 https://docs.google.com/spreadsheets/d/1BvNHe--RWGPxjPGwlAWltzUm1fxYmMcqDHsZCYKIIQA/edit?usp=drive_web&ouid=109134545473965755837
@@ -36,7 +36,12 @@ date
 
 https://docs.google.com/spreadsheets/d/1wHuss0qazdAo7fRSaW2sBs2DTh5jjVTkeoPRGqYcQnU/edit#gid=0   
 
-AUC Score 0.5959
-KMA Weather Contest 종료
+AUC Score 0.5959  
+KMA Weather Contest 종료  
+세부내용  
+https://www.notion.so/Coil-Condensation-prediction-79150205b7eb47658df64cdb5e61e6c5
+
+
+---------------------------------------------------------------------------------------------------------------------- 
 
 
