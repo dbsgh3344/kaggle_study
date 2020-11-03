@@ -1,6 +1,7 @@
 
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import wordnet
 import re
 
 def space_split (data,token_len) :
@@ -42,7 +43,18 @@ def space_split (data,token_len) :
 
     return pre_list
     
+def get_wordnet_pos(treebank_tag):
 
+    if treebank_tag=='ADJ':
+        return wordnet.ADJ
+    elif treebank_tag=='VERB':
+        return wordnet.VERB
+    elif treebank_tag=='NOUN':
+        return wordnet.NOUN
+    elif treebank_tag=='ADV':
+        return wordnet.ADV
+    else:
+        return ''
 
 
 
